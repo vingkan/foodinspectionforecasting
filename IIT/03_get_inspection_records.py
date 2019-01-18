@@ -7,6 +7,7 @@ outfile = sys.argv[1]
 if not outfile:
     raise ValueError("No outfile specified.")
 
+
 INSPECTIONS_DATA_URL = "https://data.cityofchicago.org/resource/cwig-ma7x.json"
 query = """
     SELECT
@@ -32,6 +33,7 @@ query = """
         AND inspection_date <= "2014-11-01"
     LIMIT 100000
 """
+
 
 r = requests.get(INSPECTIONS_DATA_URL, params={"$query": query})
 rows = r.json()
