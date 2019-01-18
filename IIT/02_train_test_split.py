@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from lib.strings import TARGET, DATE, PREDICTORS
+from research.strings import TARGET, DATE, PREDICTORS
 
 trainfile = sys.argv[1]
 testfile = sys.argv[2]
