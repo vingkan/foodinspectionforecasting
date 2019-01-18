@@ -1,3 +1,7 @@
+# Retrieve inspection data
+data/inspections.csv:
+	python3 03_get_inspection_records.py "data/inspections.csv"
+
 # Split dataset into training and test data
 train_test_split: data/model_matrix.csv
 	python3 02_train_test_split.py "data/train_data.csv" "data/test_data.csv" "data/model_matrix.csv"
