@@ -30,7 +30,6 @@ DETAILS = [
     "dba_name",
     "facility_type",
     "inspection_date",
-    "inspection_id",
     "inspection_type",
     "latitude",
     "license_id",
