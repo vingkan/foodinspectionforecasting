@@ -1,5 +1,8 @@
 TARGET = "criticalFound"
 DATE = "Inspection_Date"
+LICENSE = "License"
+INSPECTION_ID = "Inspection_ID"
+BUSINESS_ID = "Business_ID"
 INSPECTORS = [
     "Inspector_blue",
     "Inspector_brown",
@@ -20,4 +23,5 @@ OTHER_PREDICTORS = [
     "heat_sanitation",
     "heat_garbage",
 ]
+META = [DATE, LICENSE, INSPECTION_ID, BUSINESS_ID]
 PREDICTORS = INSPECTORS + OTHER_PREDICTORS

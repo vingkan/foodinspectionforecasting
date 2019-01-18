@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import sys
+from research.strings import META
 
 
 outfile = sys.argv[1]
@@ -29,6 +30,7 @@ xmat["heat_garbage"] = np.minimum(dat["heat_garbage"], 50)
 xmat["criticalFound"] = dat["criticalFound"]
 # Create model matrix
 mm = pd.get_dummies(xmat)
-# Add inspection date for train/test split
-mm["Inspection_Date"] = dat["Inspection_Date"]
+# Add meta data columns
+for meta in META:
+    mm[meta] = dat[meta]
 mm.to_csv(outfile, index=False)

@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from research.strings import TARGET, DATE, PREDICTORS
+from research.strings import TARGET, META, PREDICTORS
 
 trainfile = sys.argv[1]
 testfile = sys.argv[2]
@@ -13,7 +13,7 @@ if not infile:
     raise ValueError("No infile specified.")
 
 
-colnames = [TARGET, DATE] + PREDICTORS
+colnames = [TARGET] + META + PREDICTORS
 # This integer value represents the split date: 2014-07-01
 SPLIT_DATE = 16252
 
