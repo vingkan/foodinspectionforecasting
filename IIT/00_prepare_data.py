@@ -1,4 +1,4 @@
-import pandas as pd
+simport pandas as pd
 import numpy as np
 import pyreadr
 import sys
