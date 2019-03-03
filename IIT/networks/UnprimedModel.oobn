@@ -1,0 +1,272 @@
+class UnprimedModel
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_Has_Constraints = "yes";
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "com.apple.laf.AquaFonts$DerivedUIResourceFont[family=Lucida Grande,name=Lucida Grande,style=plain,size=13]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node ConsumptionLicense
+    {
+	position = (50 30);
+	states = ("False" "True");
+	HR_LinkGroup = "[TobaccoLicense:0][SanitationComplaints:0][InspectorCluster:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[TobaccoLicense:0][SanitationComplaints:0][InspectorCluster:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+    }
+
+    node SanitationComplaints
+    {
+	position = (332 35);
+	states = ("High" "Low" "Medium");
+	HR_LinkGroup = "[TobaccoLicense:0][TimeSinceLast:0][InspectorCluster:0][GarbageCartRequests:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[TobaccoLicense:0][TimeSinceLast:0][InspectorCluster:0][GarbageCartRequests:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][Temperature:0][PastCritical:0]";
+    }
+
+    node InspectorCluster
+    {
+	position = (260 117);
+	states = ("Orange" "Yellow" "Green" "Blue" "Brown" "Purple");
+	HR_LinkGroup = "[AgeAtInspection:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[AgeAtInspection:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+    }
+
+    node AgeAtInspection
+    {
+	position = (146 151);
+	states = ("Old" "Young");
+	HR_LinkGroup = "[TimeSinceLast:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[TimeSinceLast:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
+    }
+
+    node PastSerious
+    {
+	position = (250 206);
+	states = ("False" "True");
+	HR_LinkGroup = "[TimeSinceLast:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[TimeSinceLast:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
+    }
+
+    node Burglaries
+    {
+	position = (456 87);
+	states = ("High" "Low" "Medium");
+	HR_LinkGroup = "[SanitationComplaints:0][TobaccoLicense:0][GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[SanitationComplaints:0][TobaccoLicense:0][GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+    }
+
+    node TobaccoLicense
+    {
+	position = (50 190);
+	states = ("False" "True");
+	HR_LinkGroup = "[GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+    }
+
+    node CriticalFound
+    {
+	position = (151 72);
+	states = ("True" "False");
+	HR_LinkGroup = "[InspectorCluster:0][TobaccoLicense:0][ConsumptionLicense:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[InspectorCluster:0][TobaccoLicense:0][ConsumptionLicense:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+    }
+
+    node GarbageCartRequests
+    {
+	position = (370 190);
+	states = ("Medium" "High" "Low");
+	HR_LinkGroup = "[InspectorCluster:0][SanitationComplaints:0][Burglaries:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[InspectorCluster:0][SanitationComplaints:0][Burglaries:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
+    }
+
+    node TimeSinceLast
+    {
+	position = (90 270);
+	states = ("Not Recent" "Very Recent" "Somewhat Recent");
+	HR_LinkGroup = "[InspectorCluster:0][TobaccoLicense:0][Temperature:0][PastCritical:0]";
+	HR_LinkMode = "[InspectorCluster:0][TobaccoLicense:0][Temperature:0][PastCritical:0]";
+    }
+
+    node Temperature
+    {
+	position = (254 309);
+	states = ("High" "Medium" "Low");
+	HR_LinkGroup = "[TimeSinceLast:0][PastCritical:0]";
+	HR_LinkMode = "[TimeSinceLast:0][PastCritical:0]";
+    }
+
+    node PastCritical
+    {
+	position = (410 270);
+	states = ("False" "True");
+	HR_LinkGroup = "[TimeSinceLast:0][PastSerious:0]";
+	HR_LinkMode = "[TimeSinceLast:0][PastSerious:0]";
+    }
+
+    potential (ConsumptionLicense | CriticalFound)
+    {
+	data = (( 1 1 )	%  CriticalFound=True
+		( 1 1 ));	%  CriticalFound=False
+    }
+
+    potential (SanitationComplaints | Burglaries)
+    {
+	data = (( 1 1 1 )	%  Burglaries=High
+		( 1 1 1 )	%  Burglaries=Low
+		( 1 1 1 ));	%  Burglaries=Medium
+    }
+
+    potential (InspectorCluster | TimeSinceLast GarbageCartRequests CriticalFound)
+    {
+	data = (((( 1 1 1 1 1 1 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=False
+		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=True
+		  ( 1 1 1 1 1 1 )))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=False
+		((( 1 1 1 1 1 1 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=False
+		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=True
+		  ( 1 1 1 1 1 1 )))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=False
+		((( 1 1 1 1 1 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=False
+		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=True
+		  ( 1 1 1 1 1 1 ))));	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=False
+    }
+
+    potential (AgeAtInspection)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (PastSerious | PastCritical)
+    {
+	data = (( 1 1 )	%  PastCritical=False
+		( 1 1 ));	%  PastCritical=True
+    }
+
+    potential (Burglaries)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (TobaccoLicense | TimeSinceLast CriticalFound ConsumptionLicense)
+    {
+	data = (((( 1 1 )	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=False
+		  ( 1 1 ))	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=True
+		 (( 1 1 )	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=False
+		  ( 1 1 )))	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=True
+		((( 1 1 )	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=False
+		  ( 1 1 ))	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=True
+		 (( 1 1 )	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=False
+		  ( 1 1 )))	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=True
+		((( 1 1 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=False
+		  ( 1 1 ))	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=True
+		 (( 1 1 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=False
+		  ( 1 1 ))));	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=True
+    }
+
+    potential (CriticalFound)
+    {
+	data = ( 1 1 );
+    }
+
+    potential (GarbageCartRequests | Burglaries SanitationComplaints)
+    {
+	data = ((( 1 1 1 )	%  Burglaries=High  SanitationComplaints=High
+		 ( 1 1 1 )	%  Burglaries=High  SanitationComplaints=Low
+		 ( 1 1 1 ))	%  Burglaries=High  SanitationComplaints=Medium
+		(( 1 1 1 )	%  Burglaries=Low  SanitationComplaints=High
+		 ( 1 1 1 )	%  Burglaries=Low  SanitationComplaints=Low
+		 ( 1 1 1 ))	%  Burglaries=Low  SanitationComplaints=Medium
+		(( 1 1 1 )	%  Burglaries=Medium  SanitationComplaints=High
+		 ( 1 1 1 )	%  Burglaries=Medium  SanitationComplaints=Low
+		 ( 1 1 1 )));	%  Burglaries=Medium  SanitationComplaints=Medium
+    }
+
+    potential (TimeSinceLast | PastCritical Temperature PastSerious AgeAtInspection)
+    {
+	data = ((((( 1 1 1 )	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Old
+		   ( 1 1 1 ))	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Young
+		  (( 1 1 1 )	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Old
+		   ( 1 1 1 )))	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Young
+		 ((( 1 1 1 )	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
+		   ( 1 1 1 ))	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
+		  (( 1 1 1 )	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
+		   ( 1 1 1 )))	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
+		 ((( 1 1 1 )	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Old
+		   ( 1 1 1 ))	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Young
+		  (( 1 1 1 )	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Old
+		   ( 1 1 1 ))))	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Young
+		(((( 1 1 1 )	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Old
+		   ( 1 1 1 ))	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Young
+		  (( 1 1 1 )	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Old
+		   ( 1 1 1 )))	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Young
+		 ((( 1 1 1 )	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
+		   ( 1 1 1 ))	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
+		  (( 1 1 1 )	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
+		   ( 1 1 1 )))	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
+		 ((( 1 1 1 )	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Old
+		   ( 1 1 1 ))	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Young
+		  (( 1 1 1 )	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Old
+		   ( 1 1 1 )))));	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Young
+    }
+
+    potential (Temperature)
+    {
+	data = ( 1 1 1 );
+    }
+
+    potential (PastCritical)
+    {
+	data = ( 1 1 );
+    }
+} % class UnprimedModel

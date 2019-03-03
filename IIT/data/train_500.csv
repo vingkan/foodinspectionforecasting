@@ -1,4 +1,4 @@
-Inspector Cluster,Critical Found,Past Serious,Past Critical,Consumption License,Tobacco License,Time Since Last,Age at Inspection,Temperature,Burglaries,Sanitation Complaints,Garbage Cart Requests
+InspectorCluster,CriticalFound,PastSerious,PastCritical,ConsumptionLicense,TobaccoLicense,TimeSinceLast,AgeAtInspection,Temperature,Burglaries,SanitationComplaints,GarbageCartRequests
 Orange,True,False,False,False,False,Not Recent,Old,High,High,High,Medium
 Yellow,False,True,False,False,False,Very Recent,Old,Medium,High,High,High
 Orange,True,False,False,True,False,Very Recent,Young,High,Low,Low,Low
