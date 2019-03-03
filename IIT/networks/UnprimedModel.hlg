@@ -25,7 +25,7 @@ SanitationComplaints -> Burglaries
 SanitationComplaints -> GarbageCartRequests
 R2: Burglaries - GarbageCartRequests, Burglaries -> SanitationComplaints -> GarbageCartRequests => Burglaries -> GarbageCartRequests
 PastSerious -> PastCritical
-Sat Mar  2 22:01:50 2019
+Sun Mar  3 13:44:25 2019
 
 
 Moral links:
@@ -187,3 +187,340 @@ Beliefs for chance nodes:
     PastCritical:
 	False      0.5
 	True       0.5
+
+
+EM learning with 500 cases:
+
+    Log-likelihood for iteration 1: -5721.85
+    Log-likelihood for iteration 2: -4350.03
+    Log-likelihood for iteration 3: -4350.03
+
+EM learning - final results:
+
+    Log-likelihood: -4350.03
+    AIC: -4535.03
+    BIC: -4924.88
+Sun Mar  3 13:45:13 2019
+
+
+Moral links:
+
+    Marrying PastSerious and AgeAtInspection
+    Marrying GarbageCartRequests and CriticalFound
+    Marrying TimeSinceLast and CriticalFound
+    Marrying TimeSinceLast and ConsumptionLicense
+    Marrying TimeSinceLast and GarbageCartRequests
+    Marrying Temperature and PastSerious
+    Marrying Temperature and AgeAtInspection
+    Marrying PastCritical and Temperature
+    Marrying PastCritical and AgeAtInspection
+
+
+Triangulating prime component with 3 members:
+    SanitationComplaints, Burglaries, GarbageCartRequests
+This component is a clique of cost 27
+
+Triangulating prime component with 4 members:
+    InspectorCluster, CriticalFound, GarbageCartRequests, TimeSinceLast
+This component is a clique of cost 108
+
+Triangulating prime component with 4 members:
+    ConsumptionLicense, TobaccoLicense, CriticalFound, TimeSinceLast
+This component is a clique of cost 24
+
+Triangulating prime component with 5 members:
+    AgeAtInspection, PastSerious, TimeSinceLast, Temperature, PastCritical
+This component is a clique of cost 72
+
+
+Total cost of triangulation for all prime components is 231
+
+
+Elimination sequence:
+
+    PastCritical
+    Temperature
+    PastSerious
+    AgeAtInspection
+    Burglaries
+    SanitationComplaints
+    InspectorCluster
+    GarbageCartRequests
+    TobaccoLicense
+    ConsumptionLicense
+    CriticalFound
+    TimeSinceLast
+
+
+Cliques:
+
+Clique 4, 4 members, table size = 24:
+    TimeSinceLast, CriticalFound, ConsumptionLicense, TobaccoLicense
+
+Clique 3, 4 members, table size = 108:
+    TimeSinceLast, CriticalFound, GarbageCartRequests, InspectorCluster
+
+Clique 2, 3 members, table size = 27:
+    GarbageCartRequests, SanitationComplaints, Burglaries
+
+Clique 1, 5 members, table size = 72:
+    TimeSinceLast, AgeAtInspection, PastSerious, Temperature, PastCritical
+
+Total clique table size: 231
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 6:
+    TimeSinceLast, CriticalFound
+
+Cliques 2 and 3 linked, separator has 1 member and table size = 3:
+    GarbageCartRequests
+
+Cliques 1 and 4 linked, separator has 1 member and table size = 3:
+    TimeSinceLast
+
+
+Assignment of potentials to cliques:
+
+    Node ConsumptionLicense assigned to clique 4
+    Node SanitationComplaints assigned to clique 2
+    Node InspectorCluster assigned to clique 3
+    Node AgeAtInspection assigned to clique 1
+    Node PastSerious assigned to clique 1
+    Node Burglaries assigned to clique 2
+    Node TobaccoLicense assigned to clique 4
+    Node CriticalFound assigned to clique 4
+    Node GarbageCartRequests assigned to clique 2
+    Node TimeSinceLast assigned to clique 1
+    Node Temperature assigned to clique 1
+    Node PastCritical assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    ConsumptionLicense:
+	False      0.872
+	True       0.128
+
+    SanitationComplaints:
+	High       0.304
+	Low        0.362
+	Medium     0.334
+
+    InspectorCluster:
+	Orange     0.199898
+	Yellow     0.199445
+	Green      0.250605
+	Blue       0.167737
+	Brown      0.124343
+	Purple     0.0579721
+
+    AgeAtInspection:
+	Old        0.69
+	Young      0.31
+
+    PastSerious:
+	False      0.876
+	True       0.124
+
+    Burglaries:
+	High       0.296
+	Low        0.358
+	Medium     0.346
+
+    TobaccoLicense:
+	False      0.907868
+	True       0.0921319
+
+    CriticalFound:
+	True       0.14
+	False      0.86
+
+    GarbageCartRequests:
+	Medium     0.328
+	High       0.34
+	Low        0.332
+
+    TimeSinceLast:
+	Not Recent 0.539736
+	Very Recent 0.352607
+	Somewhat Recent 0.107657
+
+    Temperature:
+	High       0.346
+	Medium     0.306
+	Low        0.348
+
+    PastCritical:
+	False      0.936
+	True       0.064
+Sun Mar  3 13:46:43 2019
+
+
+Moral links:
+
+    Marrying PastSerious and AgeAtInspection
+    Marrying GarbageCartRequests and CriticalFound
+    Marrying TimeSinceLast and CriticalFound
+    Marrying TimeSinceLast and ConsumptionLicense
+    Marrying TimeSinceLast and GarbageCartRequests
+    Marrying Temperature and PastSerious
+    Marrying Temperature and AgeAtInspection
+    Marrying PastCritical and Temperature
+    Marrying PastCritical and AgeAtInspection
+
+
+Triangulating prime component with 3 members:
+    SanitationComplaints, Burglaries, GarbageCartRequests
+This component is a clique of cost 27
+
+Triangulating prime component with 4 members:
+    InspectorCluster, CriticalFound, GarbageCartRequests, TimeSinceLast
+This component is a clique of cost 108
+
+Triangulating prime component with 4 members:
+    ConsumptionLicense, TobaccoLicense, CriticalFound, TimeSinceLast
+This component is a clique of cost 24
+
+Triangulating prime component with 5 members:
+    AgeAtInspection, PastSerious, TimeSinceLast, Temperature, PastCritical
+This component is a clique of cost 72
+
+
+Total cost of triangulation for all prime components is 231
+
+
+Elimination sequence:
+
+    PastCritical
+    Temperature
+    PastSerious
+    AgeAtInspection
+    Burglaries
+    SanitationComplaints
+    InspectorCluster
+    GarbageCartRequests
+    TobaccoLicense
+    ConsumptionLicense
+    CriticalFound
+    TimeSinceLast
+
+
+Cliques:
+
+Clique 4, 4 members, table size = 24:
+    TimeSinceLast, CriticalFound, ConsumptionLicense, TobaccoLicense
+
+Clique 3, 4 members, table size = 108:
+    TimeSinceLast, CriticalFound, GarbageCartRequests, InspectorCluster
+
+Clique 2, 3 members, table size = 27:
+    GarbageCartRequests, SanitationComplaints, Burglaries
+
+Clique 1, 5 members, table size = 72:
+    TimeSinceLast, AgeAtInspection, PastSerious, Temperature, PastCritical
+
+Total clique table size: 231
+
+
+The junction forest:
+
+Creating junction tree with clique 4 as root ...
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 6:
+    TimeSinceLast, CriticalFound
+
+Cliques 2 and 3 linked, separator has 1 member and table size = 3:
+    GarbageCartRequests
+
+Cliques 1 and 4 linked, separator has 1 member and table size = 3:
+    TimeSinceLast
+
+
+Assignment of potentials to cliques:
+
+    Node ConsumptionLicense assigned to clique 4
+    Node SanitationComplaints assigned to clique 2
+    Node InspectorCluster assigned to clique 3
+    Node AgeAtInspection assigned to clique 1
+    Node PastSerious assigned to clique 1
+    Node Burglaries assigned to clique 2
+    Node TobaccoLicense assigned to clique 4
+    Node CriticalFound assigned to clique 4
+    Node GarbageCartRequests assigned to clique 2
+    Node TimeSinceLast assigned to clique 1
+    Node Temperature assigned to clique 1
+    Node PastCritical assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+    No errors found
+
+
+Beliefs for chance nodes:
+
+    ConsumptionLicense:
+	False      0.872
+	True       0.128
+
+    SanitationComplaints:
+	High       0.304
+	Low        0.362
+	Medium     0.334
+
+    InspectorCluster:
+	Orange     0.199898
+	Yellow     0.199445
+	Green      0.250605
+	Blue       0.167737
+	Brown      0.124343
+	Purple     0.0579721
+
+    AgeAtInspection:
+	Old        0.69
+	Young      0.31
+
+    PastSerious:
+	False      0.876
+	True       0.124
+
+    Burglaries:
+	High       0.296
+	Low        0.358
+	Medium     0.346
+
+    TobaccoLicense:
+	False      0.907868
+	True       0.0921319
+
+    CriticalFound:
+	True       0.14
+	False      0.86
+
+    GarbageCartRequests:
+	Medium     0.328
+	High       0.34
+	Low        0.332
+
+    TimeSinceLast:
+	Not Recent 0.539736
+	Very Recent 0.352607
+	Somewhat Recent 0.107657
+
+    Temperature:
+	High       0.346
+	Medium     0.306
+	Low        0.348
+
+    PastCritical:
+	False      0.936
+	True       0.064

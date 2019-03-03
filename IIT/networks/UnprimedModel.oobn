@@ -53,7 +53,7 @@ class UnprimedModel
 
     node ConsumptionLicense
     {
-	position = (50 30);
+	position = (64 42);
 	states = ("False" "True");
 	HR_LinkGroup = "[TobaccoLicense:0][SanitationComplaints:0][InspectorCluster:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TobaccoLicense:0][SanitationComplaints:0][InspectorCluster:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -61,7 +61,7 @@ class UnprimedModel
 
     node SanitationComplaints
     {
-	position = (332 35);
+	position = (310 66);
 	states = ("High" "Low" "Medium");
 	HR_LinkGroup = "[TobaccoLicense:0][TimeSinceLast:0][InspectorCluster:0][GarbageCartRequests:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TobaccoLicense:0][TimeSinceLast:0][InspectorCluster:0][GarbageCartRequests:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][Temperature:0][PastCritical:0]";
@@ -69,7 +69,7 @@ class UnprimedModel
 
     node InspectorCluster
     {
-	position = (260 117);
+	position = (270 172);
 	states = ("Orange" "Yellow" "Green" "Blue" "Brown" "Purple");
 	HR_LinkGroup = "[AgeAtInspection:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[AgeAtInspection:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -77,7 +77,7 @@ class UnprimedModel
 
     node AgeAtInspection
     {
-	position = (146 151);
+	position = (170 181);
 	states = ("Old" "Young");
 	HR_LinkGroup = "[TimeSinceLast:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TimeSinceLast:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
@@ -85,7 +85,7 @@ class UnprimedModel
 
     node PastSerious
     {
-	position = (250 206);
+	position = (282 236);
 	states = ("False" "True");
 	HR_LinkGroup = "[TimeSinceLast:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TimeSinceLast:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
@@ -93,7 +93,7 @@ class UnprimedModel
 
     node Burglaries
     {
-	position = (456 87);
+	position = (447 113);
 	states = ("High" "Low" "Medium");
 	HR_LinkGroup = "[SanitationComplaints:0][TobaccoLicense:0][GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[SanitationComplaints:0][TobaccoLicense:0][GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -101,7 +101,7 @@ class UnprimedModel
 
     node TobaccoLicense
     {
-	position = (50 190);
+	position = (64 202);
 	states = ("False" "True");
 	HR_LinkGroup = "[GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -109,7 +109,7 @@ class UnprimedModel
 
     node CriticalFound
     {
-	position = (151 72);
+	position = (160 110);
 	states = ("True" "False");
 	HR_LinkGroup = "[InspectorCluster:0][TobaccoLicense:0][ConsumptionLicense:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[InspectorCluster:0][TobaccoLicense:0][ConsumptionLicense:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -117,7 +117,7 @@ class UnprimedModel
 
     node GarbageCartRequests
     {
-	position = (370 190);
+	position = (403 189);
 	states = ("Medium" "High" "Low");
 	HR_LinkGroup = "[InspectorCluster:0][SanitationComplaints:0][Burglaries:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[InspectorCluster:0][SanitationComplaints:0][Burglaries:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -125,7 +125,7 @@ class UnprimedModel
 
     node TimeSinceLast
     {
-	position = (90 270);
+	position = (104 282);
 	states = ("Not Recent" "Very Recent" "Somewhat Recent");
 	HR_LinkGroup = "[InspectorCluster:0][TobaccoLicense:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[InspectorCluster:0][TobaccoLicense:0][Temperature:0][PastCritical:0]";
@@ -133,7 +133,7 @@ class UnprimedModel
 
     node Temperature
     {
-	position = (254 309);
+	position = (285 336);
 	states = ("High" "Medium" "Low");
 	HR_LinkGroup = "[TimeSinceLast:0][PastCritical:0]";
 	HR_LinkMode = "[TimeSinceLast:0][PastCritical:0]";
@@ -141,7 +141,7 @@ class UnprimedModel
 
     node PastCritical
     {
-	position = (410 270);
+	position = (424 282);
 	states = ("False" "True");
 	HR_LinkGroup = "[TimeSinceLast:0][PastSerious:0]";
 	HR_LinkMode = "[TimeSinceLast:0][PastSerious:0]";
@@ -149,124 +149,206 @@ class UnprimedModel
 
     potential (ConsumptionLicense | CriticalFound)
     {
-	data = (( 1 1 )	%  CriticalFound=True
-		( 1 1 ));	%  CriticalFound=False
+	data = (( 0.785714 0.214286 )	%  CriticalFound=True
+		( 0.886047 0.113953 ));	%  CriticalFound=False
+	experience
+	     = ( 70	%  CriticalFound=True
+		 430 );	%  CriticalFound=False
     }
 
     potential (SanitationComplaints | Burglaries)
     {
-	data = (( 1 1 1 )	%  Burglaries=High
-		( 1 1 1 )	%  Burglaries=Low
-		( 1 1 1 ));	%  Burglaries=Medium
+	data = (( 0.547297 0.121622 0.331081 )	%  Burglaries=High
+		( 0.117318 0.603352 0.27933 )	%  Burglaries=Low
+		( 0.289017 0.317919 0.393064 ));	%  Burglaries=Medium
+	experience
+	     = ( 148	%  Burglaries=High
+		 179	%  Burglaries=Low
+		 173 );	%  Burglaries=Medium
     }
 
     potential (InspectorCluster | TimeSinceLast GarbageCartRequests CriticalFound)
     {
-	data = (((( 1 1 1 1 1 1 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=False
-		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=False
-		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=True
-		  ( 1 1 1 1 1 1 )))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=False
-		((( 1 1 1 1 1 1 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=False
-		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=False
-		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=True
-		  ( 1 1 1 1 1 1 )))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=False
-		((( 1 1 1 1 1 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=False
-		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=False
-		 (( 1 1 1 1 1 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=True
-		  ( 1 1 1 1 1 1 ))));	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=False
+	data = (((( 0.294118 0.0588235 0.117647 0.411765 0 0.117647 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=True
+		  ( 0.2625 0.125 0.225 0.1875 0.125 0.075 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 (( 0.416667 0 0.0833333 0.416667 0 0.0833333 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=True
+		  ( 0.211765 0.176471 0.211765 0.141176 0.247059 0.0117647 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=False
+		 (( 0 0.2 0.1 0.4 0 0.3 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=True
+		  ( 0.119403 0.253731 0.41791 0.164179 0.0149254 0.0298507 )))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=False
+		((( 0.4 0.4 0 0 0.2 0 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=True
+		  ( 0.142857 0.183673 0.22449 0.142857 0.265306 0.0408163 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 (( 0.666667 0 0 0.166667 0.166667 0 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=True
+		  ( 0.166667 0.125 0.4375 0.0833333 0.166667 0.0208333 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=False
+		 (( 0.153846 0.153846 0.153846 0.461538 0 0.0769231 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=True
+		  ( 0.254545 0.272727 0.254545 0.0909091 0.0727273 0.0545455 )))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=False
+		((( 0.25 0.25 0 0.25 0 0.25 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=True
+		  ( 0.222222 0.333333 0.222222 0.222222 0 0 ))	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 (( 0 0 0 1 0 0 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=True
+		  ( 0.0588235 0.352941 0.176471 0.117647 0.176471 0.117647 ))	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=False
+		 (( 0 0 0 0 0 1 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=True
+		  ( 0.1 0.55 0.1 0.05 0.05 0.15 ))));	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=False
+	experience
+	     = ((( 17	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=True
+		   80 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 ( 12	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=True
+		   85 )	%  TimeSinceLast=Not Recent  GarbageCartRequests=High  CriticalFound=False
+		 ( 10	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=True
+		   67 ))	%  TimeSinceLast=Not Recent  GarbageCartRequests=Low  CriticalFound=False
+		(( 5	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=True
+		   49 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 ( 6	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=True
+		   48 )	%  TimeSinceLast=Very Recent  GarbageCartRequests=High  CriticalFound=False
+		 ( 13	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=True
+		   55 ))	%  TimeSinceLast=Very Recent  GarbageCartRequests=Low  CriticalFound=False
+		(( 4	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=True
+		   9 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Medium  CriticalFound=False
+		 ( 2	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=True
+		   17 )	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=High  CriticalFound=False
+		 ( 1	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=True
+		   20 )));	%  TimeSinceLast=Somewhat Recent  GarbageCartRequests=Low  CriticalFound=False
     }
 
     potential (AgeAtInspection)
     {
-	data = ( 1 1 );
+	data = ( 0.69 0.31 );
+	experience = 500;
     }
 
     potential (PastSerious | PastCritical)
     {
-	data = (( 1 1 )	%  PastCritical=False
-		( 1 1 ));	%  PastCritical=True
+	data = (( 0.905983 0.0940171 )	%  PastCritical=False
+		( 0.4375 0.5625 ));	%  PastCritical=True
+	experience
+	     = ( 468	%  PastCritical=False
+		 32 );	%  PastCritical=True
     }
 
     potential (Burglaries)
     {
-	data = ( 1 1 1 );
+	data = ( 0.296 0.358 0.346 );
+	experience = 500;
     }
 
     potential (TobaccoLicense | TimeSinceLast CriticalFound ConsumptionLicense)
     {
-	data = (((( 1 1 )	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=False
-		  ( 1 1 ))	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=True
-		 (( 1 1 )	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=False
-		  ( 1 1 )))	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=True
-		((( 1 1 )	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=False
-		  ( 1 1 ))	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=True
-		 (( 1 1 )	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=False
-		  ( 1 1 )))	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=True
-		((( 1 1 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=False
-		  ( 1 1 ))	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=True
-		 (( 1 1 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=False
-		  ( 1 1 ))));	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=True
+	data = (((( 0.69697 0.30303 )	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=False
+		  ( 1 0 ))	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=True
+		 (( 0.878641 0.121359 )	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=False
+		  ( 1 0 )))	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=True
+		((( 0.882353 0.117647 )	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=False
+		  ( 1 0 ))	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=True
+		 (( 0.954887 0.0451128 )	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=False
+		  ( 0.894737 0.105263 )))	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=True
+		((( 1 0 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=False
+		  ( 1 0 ))	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=True
+		 (( 0.952381 0.047619 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=False
+		  ( 1 0 ))));	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=True
+	experience
+	     = ((( 33	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=False
+		   6 )	%  TimeSinceLast=Not Recent  CriticalFound=True  ConsumptionLicense=True
+		 ( 206	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=False
+		   26 ))	%  TimeSinceLast=Not Recent  CriticalFound=False  ConsumptionLicense=True
+		(( 17	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=False
+		   7 )	%  TimeSinceLast=Very Recent  CriticalFound=True  ConsumptionLicense=True
+		 ( 133	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=False
+		   19 ))	%  TimeSinceLast=Very Recent  CriticalFound=False  ConsumptionLicense=True
+		(( 5	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=False
+		   2 )	%  TimeSinceLast=Somewhat Recent  CriticalFound=True  ConsumptionLicense=True
+		 ( 42	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=False
+		   4 )));	%  TimeSinceLast=Somewhat Recent  CriticalFound=False  ConsumptionLicense=True
     }
 
     potential (CriticalFound)
     {
-	data = ( 1 1 );
+	data = ( 0.14 0.86 );
+	experience = 500;
     }
 
     potential (GarbageCartRequests | Burglaries SanitationComplaints)
     {
-	data = ((( 1 1 1 )	%  Burglaries=High  SanitationComplaints=High
-		 ( 1 1 1 )	%  Burglaries=High  SanitationComplaints=Low
-		 ( 1 1 1 ))	%  Burglaries=High  SanitationComplaints=Medium
-		(( 1 1 1 )	%  Burglaries=Low  SanitationComplaints=High
-		 ( 1 1 1 )	%  Burglaries=Low  SanitationComplaints=Low
-		 ( 1 1 1 ))	%  Burglaries=Low  SanitationComplaints=Medium
-		(( 1 1 1 )	%  Burglaries=Medium  SanitationComplaints=High
-		 ( 1 1 1 )	%  Burglaries=Medium  SanitationComplaints=Low
-		 ( 1 1 1 )));	%  Burglaries=Medium  SanitationComplaints=Medium
+	data = ((( 0.283951 0.641975 0.0740741 )	%  Burglaries=High  SanitationComplaints=High
+		 ( 0.333333 0.444444 0.222222 )	%  Burglaries=High  SanitationComplaints=Low
+		 ( 0.265306 0.367347 0.367347 ))	%  Burglaries=High  SanitationComplaints=Medium
+		(( 0.380952 0.238095 0.380952 )	%  Burglaries=Low  SanitationComplaints=High
+		 ( 0.314815 0.111111 0.574074 )	%  Burglaries=Low  SanitationComplaints=Low
+		 ( 0.32 0.2 0.48 ))	%  Burglaries=Low  SanitationComplaints=Medium
+		(( 0.4 0.52 0.08 )	%  Burglaries=Medium  SanitationComplaints=High
+		 ( 0.345455 0.236364 0.418182 )	%  Burglaries=Medium  SanitationComplaints=Low
+		 ( 0.367647 0.382353 0.25 )));	%  Burglaries=Medium  SanitationComplaints=Medium
+	experience
+	     = (( 81	%  Burglaries=High  SanitationComplaints=High
+		  18	%  Burglaries=High  SanitationComplaints=Low
+		  49 )	%  Burglaries=High  SanitationComplaints=Medium
+		( 21	%  Burglaries=Low  SanitationComplaints=High
+		  108	%  Burglaries=Low  SanitationComplaints=Low
+		  50 )	%  Burglaries=Low  SanitationComplaints=Medium
+		( 50	%  Burglaries=Medium  SanitationComplaints=High
+		  55	%  Burglaries=Medium  SanitationComplaints=Low
+		  68 ));	%  Burglaries=Medium  SanitationComplaints=Medium
     }
 
     potential (TimeSinceLast | PastCritical Temperature PastSerious AgeAtInspection)
     {
-	data = ((((( 1 1 1 )	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Old
-		   ( 1 1 1 ))	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Young
-		  (( 1 1 1 )	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Old
-		   ( 1 1 1 )))	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Young
-		 ((( 1 1 1 )	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
-		   ( 1 1 1 ))	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
-		  (( 1 1 1 )	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
-		   ( 1 1 1 )))	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
-		 ((( 1 1 1 )	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Old
-		   ( 1 1 1 ))	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Young
-		  (( 1 1 1 )	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Old
-		   ( 1 1 1 ))))	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Young
-		(((( 1 1 1 )	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Old
-		   ( 1 1 1 ))	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Young
-		  (( 1 1 1 )	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Old
-		   ( 1 1 1 )))	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Young
-		 ((( 1 1 1 )	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
-		   ( 1 1 1 ))	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
-		  (( 1 1 1 )	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
-		   ( 1 1 1 )))	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
-		 ((( 1 1 1 )	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Old
-		   ( 1 1 1 ))	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Young
-		  (( 1 1 1 )	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Old
-		   ( 1 1 1 )))));	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Young
+	data = ((((( 0.613208 0.254717 0.132075 )	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Old
+		   ( 0.770833 0.104167 0.125 ))	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Young
+		  (( 0 0.333333 0.666667 )	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Old
+		   ( 0 1 0 )))	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Young
+		 ((( 0.648352 0.274725 0.0769231 )	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
+		   ( 0.842105 0.0526316 0.105263 ))	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
+		  (( 0 0.8 0.2 )	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
+		   ( 0.2 0.8 0 )))	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
+		 ((( 0.489362 0.468085 0.0425532 )	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Old
+		   ( 0.659574 0.297872 0.0425532 ))	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Young
+		  (( 0 0.8 0.2 )	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Old
+		   ( 0 1 0 ))))	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Young
+		(((( 0 1 0 )	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Old
+		   ( 0 0.5 0.5 ))	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Young
+		  (( 0 0.833333 0.166667 )	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Old
+		   ( 0 1 0 )))	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Young
+		 ((( 0 0.666667 0.333333 )	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
+		   ( 0 0 1 ))	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
+		  (( 0 0.5 0.5 )	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
+		   ( 0 1 0 )))	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
+		 ((( 0 1 0 )	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Old
+		   ( 0 1 0 ))	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Young
+		  (( 0 0.833333 0.166667 )	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Old
+		   ( 0 1 0 )))));	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Young
+	experience
+	     = (((( 106	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Old
+		    48 )	%  PastCritical=False  Temperature=High  PastSerious=False  AgeAtInspection=Young
+		  ( 6	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Old
+		    1 ))	%  PastCritical=False  Temperature=High  PastSerious=True  AgeAtInspection=Young
+		 (( 91	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
+		    38 )	%  PastCritical=False  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
+		  ( 10	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
+		    5 ))	%  PastCritical=False  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
+		 (( 94	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Old
+		    47 )	%  PastCritical=False  Temperature=Low  PastSerious=False  AgeAtInspection=Young
+		  ( 15	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Old
+		    7 )))	%  PastCritical=False  Temperature=Low  PastSerious=True  AgeAtInspection=Young
+		((( 3	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Old
+		    2 )	%  PastCritical=True  Temperature=High  PastSerious=False  AgeAtInspection=Young
+		  ( 6	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Old
+		    1 ))	%  PastCritical=True  Temperature=High  PastSerious=True  AgeAtInspection=Young
+		 (( 3	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Old
+		    2 )	%  PastCritical=True  Temperature=Medium  PastSerious=False  AgeAtInspection=Young
+		  ( 2	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Old
+		    2 ))	%  PastCritical=True  Temperature=Medium  PastSerious=True  AgeAtInspection=Young
+		 (( 3	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Old
+		    1 )	%  PastCritical=True  Temperature=Low  PastSerious=False  AgeAtInspection=Young
+		  ( 6	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Old
+		    1 ))));	%  PastCritical=True  Temperature=Low  PastSerious=True  AgeAtInspection=Young
     }
 
     potential (Temperature)
     {
-	data = ( 1 1 1 );
+	data = ( 0.346 0.306 0.348 );
+	experience = 500;
     }
 
     potential (PastCritical)
     {
-	data = ( 1 1 );
+	data = ( 0.936 0.064 );
+	experience = 500;
     }
 } % class UnprimedModel
