@@ -22,4 +22,5 @@ dat = pd.DataFrame(dat_all.dropna())
 # dat["criticalFound"] = (dat["criticalCount"] > 0).astype(int)
 # To be faithful to the R source:
 dat["criticalFound"] = np.minimum(1, dat["criticalCount"])
+print("{} records.".format(len(dat)))
 dat.to_csv(outfile, index=False)

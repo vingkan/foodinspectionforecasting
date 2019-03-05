@@ -33,4 +33,5 @@ mm = pd.get_dummies(xmat)
 # Add meta data columns
 for meta in META:
     mm[meta] = dat[meta]
+print("{} records.".format(len(mm)))
 mm.to_csv(outfile, index=False)

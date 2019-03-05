@@ -27,5 +27,8 @@ iiTest = mm["Inspection_Date"] > SPLIT_DATE
 # len(dat), len(xmat), len(mm)
 data_train = mm[iiTrain][colnames]
 data_test = mm[iiTest][colnames]
+print("Train: {} records.".format(len(data_train)))
+print("Test:  {} records.".format(len(data_test)))
+print("Total: {} records.".format(len(data_train) + len(data_test)))
 data_train.to_csv(trainfile, index=False)
 data_test.to_csv(testfile, index=False)

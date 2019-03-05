@@ -1,5 +1,5 @@
 # Join inspection data
-data/inspections.csv: data/model_matrix.csv data/inspections_records.csv
+data/inspections.csv: data/model_matrix.csv data/inspection_records.csv
 	python3 04_join_inspection_details.py "data/inspections.csv" "data/model_matrix.csv" "data/inspection_records.csv"
 
 # Retrieve inspection data
