@@ -53,7 +53,7 @@ class UnprimedModel
 
     node ConsumptionLicense
     {
-	position = (64 42);
+	position = (82 94);
 	states = ("False" "True");
 	HR_LinkGroup = "[TobaccoLicense:0][SanitationComplaints:0][InspectorCluster:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TobaccoLicense:0][SanitationComplaints:0][InspectorCluster:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -61,7 +61,7 @@ class UnprimedModel
 
     node SanitationComplaints
     {
-	position = (310 66);
+	position = (541 98);
 	states = ("High" "Low" "Medium");
 	HR_LinkGroup = "[TobaccoLicense:0][TimeSinceLast:0][InspectorCluster:0][GarbageCartRequests:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TobaccoLicense:0][TimeSinceLast:0][InspectorCluster:0][GarbageCartRequests:0][AgeAtInspection:0][PastSerious:0][Burglaries:0][CriticalFound:0][Temperature:0][PastCritical:0]";
@@ -69,7 +69,7 @@ class UnprimedModel
 
     node InspectorCluster
     {
-	position = (270 172);
+	position = (658 394);
 	states = ("Orange" "Yellow" "Green" "Blue" "Brown" "Purple");
 	HR_LinkGroup = "[AgeAtInspection:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[AgeAtInspection:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -77,7 +77,7 @@ class UnprimedModel
 
     node AgeAtInspection
     {
-	position = (170 181);
+	position = (249 246);
 	states = ("Old" "Young");
 	HR_LinkGroup = "[TimeSinceLast:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TimeSinceLast:0][PastSerious:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
@@ -85,7 +85,7 @@ class UnprimedModel
 
     node PastSerious
     {
-	position = (282 236);
+	position = (451 290);
 	states = ("False" "True");
 	HR_LinkGroup = "[TimeSinceLast:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[TimeSinceLast:0][Burglaries:0][TobaccoLicense:0][CriticalFound:0][GarbageCartRequests:0][Temperature:0][PastCritical:0]";
@@ -93,7 +93,7 @@ class UnprimedModel
 
     node Burglaries
     {
-	position = (447 113);
+	position = (658 28);
 	states = ("High" "Low" "Medium");
 	HR_LinkGroup = "[SanitationComplaints:0][TobaccoLicense:0][GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[SanitationComplaints:0][TobaccoLicense:0][GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -101,7 +101,7 @@ class UnprimedModel
 
     node TobaccoLicense
     {
-	position = (64 202);
+	position = (55 395);
 	states = ("False" "True");
 	HR_LinkGroup = "[GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[GarbageCartRequests:0][CriticalFound:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -109,7 +109,7 @@ class UnprimedModel
 
     node CriticalFound
     {
-	position = (160 110);
+	position = (365 48);
 	states = ("True" "False");
 	HR_LinkGroup = "[InspectorCluster:0][TobaccoLicense:0][ConsumptionLicense:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[InspectorCluster:0][TobaccoLicense:0][ConsumptionLicense:0][GarbageCartRequests:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -117,7 +117,7 @@ class UnprimedModel
 
     node GarbageCartRequests
     {
-	position = (403 189);
+	position = (605 205);
 	states = ("Medium" "High" "Low");
 	HR_LinkGroup = "[InspectorCluster:0][SanitationComplaints:0][Burglaries:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[InspectorCluster:0][SanitationComplaints:0][Burglaries:0][TimeSinceLast:0][Temperature:0][PastCritical:0]";
@@ -125,7 +125,7 @@ class UnprimedModel
 
     node TimeSinceLast
     {
-	position = (104 282);
+	position = (326 354);
 	states = ("Not Recent" "Very Recent" "Somewhat Recent");
 	HR_LinkGroup = "[InspectorCluster:0][TobaccoLicense:0][Temperature:0][PastCritical:0]";
 	HR_LinkMode = "[InspectorCluster:0][TobaccoLicense:0][Temperature:0][PastCritical:0]";
@@ -133,7 +133,7 @@ class UnprimedModel
 
     node Temperature
     {
-	position = (285 336);
+	position = (329 211);
 	states = ("High" "Medium" "Low");
 	HR_LinkGroup = "[TimeSinceLast:0][PastCritical:0]";
 	HR_LinkMode = "[TimeSinceLast:0][PastCritical:0]";
@@ -141,7 +141,7 @@ class UnprimedModel
 
     node PastCritical
     {
-	position = (424 282);
+	position = (422 194);
 	states = ("False" "True");
 	HR_LinkGroup = "[TimeSinceLast:0][PastSerious:0]";
 	HR_LinkMode = "[TimeSinceLast:0][PastSerious:0]";
