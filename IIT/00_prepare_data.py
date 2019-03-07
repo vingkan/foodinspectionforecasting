@@ -4,6 +4,9 @@ import pyreadr
 import sys
 
 
+from research.strings import INSPECTION_ID
+
+
 outfile = sys.argv[1]
 infile = sys.argv[2]
 if not outfile:
@@ -22,5 +25,6 @@ dat = pd.DataFrame(dat_all.dropna())
 # dat["criticalFound"] = (dat["criticalCount"] > 0).astype(int)
 # To be faithful to the R source:
 dat["criticalFound"] = np.minimum(1, dat["criticalCount"])
+dat[INSPECTION_ID] = dat[INSPECTION_ID].apply(lambda val: str(int(val)))
 print("{} records.".format(len(dat)))
 dat.to_csv(outfile, index=False)

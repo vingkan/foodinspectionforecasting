@@ -1,3 +1,5 @@
+all: model_train_test_split inspections_train_test_split
+
 # Split inspection data into training and test data
 inspections_train_test_split: data/inspections.csv
 	python3 02_train_test_split.py "data/inspections_train.csv" "data/inspections_test.csv" "data/inspections.csv"
@@ -23,4 +25,11 @@ data/clean_data.csv:
 	python3 00_prepare_data.py "data/clean_data.csv" "../DATA/dat_model.Rds"
 
 clean:
-	rm data/*.csv
+	rm data/clean_data.csv
+	rm data/inspections_test.csv
+	rm data/test_data.csv
+	rm data/inspection_records.csv
+	rm data/inspections_train.csv
+	rm data/inspections.csv
+	rm data/model_matrix.csv
+	rm data/train_data.csv

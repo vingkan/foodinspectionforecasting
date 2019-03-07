@@ -15,6 +15,7 @@ if not inspectionfile:
 
 data = pd.read_csv(infile)
 inspections = pd.read_csv(inspectionfile)
-merged = data.set_index("Inspection_ID").join(inspections.set_index("inspection_id"))
+data["inspection_id"] = data["Inspection_ID"]
+merged = data.set_index("inspection_id").join(inspections.set_index("inspection_id"))
 print("{} records.".format(len(merged)))
 merged.to_csv(outfile, index=False)
