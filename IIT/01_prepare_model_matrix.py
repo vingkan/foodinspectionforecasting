@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import sys
-from research.strings import META
+from research.strings import TARGET, META, PREDICTORS
 
 
 outfile = sys.argv[1]
@@ -10,6 +10,9 @@ if not outfile:
     raise ValueError("No outfile specified.")
 if not infile:
     raise ValueError("No infile specified.")
+
+
+colnames = [TARGET] + META + PREDICTORS
 
 
 dat = pd.read_csv(infile)
@@ -33,5 +36,7 @@ mm = pd.get_dummies(xmat)
 # Add meta data columns
 for meta in META:
     mm[meta] = dat[meta]
+# Set column order
+mm = mm[colnames]
 print("{} records.".format(len(mm)))
 mm.to_csv(outfile, index=False)

@@ -1,3 +1,7 @@
+# Split inspection data into training and test data
+inspections_train_test_split: data/inspections.csv
+	python3 02_train_test_split.py "data/inspections_train.csv" "data/inspections_test.csv" "data/inspections.csv"
+
 # Join inspection data
 data/inspections.csv: data/model_matrix.csv data/inspection_records.csv
 	python3 04_join_inspection_details.py "data/inspections.csv" "data/model_matrix.csv" "data/inspection_records.csv"
@@ -7,7 +11,7 @@ data/inspection_records.csv:
 	python3 03_get_inspection_records.py "data/inspection_records.csv"
 
 # Split dataset into training and test data
-train_test_split: data/model_matrix.csv
+model_train_test_split: data/model_matrix.csv
 	python3 02_train_test_split.py "data/train_data.csv" "data/test_data.csv" "data/model_matrix.csv"
 
 # Prepare features according to Chicago paper
