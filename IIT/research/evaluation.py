@@ -98,7 +98,7 @@ def evaluate_model(y_true, y_pred, verbose=True, show_proportion=False):
         return f1, prec, rec, table, (tn, fp, fn, tp)
 
 
-def rank_models(models, Xt, yt, Xv, yv, predictors, demographics):
+def rank_models(models, Xt, yt, Xv, yv, predictors):
     results = []
     clfs = []
     for base_clf in tqdm(models):
@@ -109,7 +109,6 @@ def rank_models(models, Xt, yt, Xv, yv, predictors, demographics):
         y_pred = clf.predict(Xv[predictors])
         f1, prec, rec, _, mat = evaluate_model(yv, y_pred, verbose=False)
         tn, fp, fn, tp = mat
-        zero = 1e-10
         res = {
             "Model": name,
             "Params": params,
@@ -121,19 +120,8 @@ def rank_models(models, Xt, yt, Xv, yv, predictors, demographics):
             "FN": fn,
             "TP": tp,
         }
-        for demo in demographics:
-            chosen = (Xv[demo] * y_pred).sum()
-            opportunity = "P(I|{})".format(demo)
-            res[opportunity] = chosen / (Xv[demo].sum() + zero)
-            probability = "P({}|I)".format(demo)
-            res[probability] = chosen / (y_pred.sum() + zero)
         clfs.append(clf)
         results.append(res)
     cols = ["Model", "F1", "Prc", "Rec", "TP", "FN", "FP", "TN"]
-    for demo in demographics:
-        opportunity = "P(I|{})".format(demo)
-        probability = "P({}|I)".format(demo)
-        cols.append(opportunity)
-        cols.append(probability)
     rdf = pd.DataFrame(results)
     return rdf, cols, clfs
