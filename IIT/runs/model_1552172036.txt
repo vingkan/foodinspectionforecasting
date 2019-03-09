@@ -1,0 +1,16 @@
+Saturday 03/09/19 04:53 PM
+Epochs = 10
+-----------
+F1(Train) = 0.03288
+Precision(Train) = 0.44565
+Recall(Train) = 0.01707
+F1(Test) = 0.08602
+Precision(Test) = 0.57143
+Recall(Test) = 0.04651
+-----------
+Predicts 0.53880% True on Train
+Predicts 1.28283% True on Test
+-----------
+model = Sequential()
+model.add(Dense(16, activation="relu", input_shape=(16,)))
+model.add(Dense(14, activation="sigmoid"))
