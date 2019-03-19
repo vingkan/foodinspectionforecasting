@@ -1,0 +1,17 @@
+Tuesday 03/19/19 03:56 PM
+Epochs = 15
+-----------
+F1(Train) = 0.00180
+Precision(Train) = 0.50000
+Recall(Train) = 0.00090
+F1(Test) = 0.00750
+Precision(Test) = 0.12500
+Recall(Test) = 0.00387
+-----------
+Predicts 0.02463% True on Train
+Predicts 0.45321% True on Test
+-----------
+model = Sequential()
+model.add(Dense(16, activation="linear", input_shape=(16,)))
+model.add(Dense(16, activation="linear"))
+model.add(Dense(14, activation="linear"))
