@@ -96,7 +96,7 @@ def compare_days_earlier(y_true, days, rankings, ax=None, verbose=False):
         else:
             no_changes.append(name)
     ax.set_xlabel("Days Earlier")
-    ax.set_ylabel("Frequency")
+    ax.set_ylabel("Count of Inspections")
     ax.set_title("Change in Days to Find Critical Violations")
     ax.legend()
     if verbose:
