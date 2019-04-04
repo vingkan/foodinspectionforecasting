@@ -33,7 +33,7 @@ query = """
         facility_type == "Restaurant"
         AND inspection_type IN ("CANVAS", "Canvass", "CANVASS")
         AND results IN ("Pass", "Fail", "Pass w/ Conditions")
-        AND inspection_date <= "2019-06-30"
+        AND inspection_date <= "2018-06-30"
         AND inspection_date IS NOT NULL
         AND address IS NOT NULL
         AND license_ IS NOT NULL
@@ -45,7 +45,7 @@ query = """
 # Fetch records from data portal
 r = requests.get(INSPECTIONS_DATA_URL, params={"$query": query})
 rows = r.json()
-# Expect 53492 rows
+# Expect 50462 rows
 print("Returned {} rows from query.".format(len(rows)))
 data = pd.DataFrame(rows)
 

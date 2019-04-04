@@ -1,7 +1,7 @@
-all: model_train_test_split inspections_train_test_split data/canvass_records.csv
+all: model_train_test_split inspections_train_test_split data/canvass_records.csv.gz
 
-data/canvass_records.csv:
-	python3 05_get_canvass_records.py "data/canvass_records.csv"
+data/canvass_records.csv.gz:
+	python3 05_get_canvass_records.py "data/canvass_records.csv.gz"
 
 # Split inspection data into training and test data
 inspections_train_test_split: data/inspections.csv
