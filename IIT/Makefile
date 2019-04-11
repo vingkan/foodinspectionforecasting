@@ -1,7 +1,12 @@
-all: model_train_test_split inspections_train_test_split data/canvass_records.csv.gz
+all: model_train_test_split inspections_train_test_split data_portal_inspections
+
+data_portal_inspections: data/canvass_records.csv.gz data/complaint_records.csv.gz
+
+data/complaint_records.csv.gz:
+	python3 05_get_data_portal_records.py "05_get_complaint_records.sql" "data/complaint_records.csv.gz"
 
 data/canvass_records.csv.gz:
-	python3 05_get_canvass_records.py "data/canvass_records.csv.gz"
+	python3 05_get_data_portal_records.py "05_get_canvass_records.sql" "data/canvass_records.csv.gz"
 
 # Split inspection data into training and test data
 inspections_train_test_split: data/inspections.csv
@@ -36,4 +41,5 @@ clean:
 	rm data/inspections.csv
 	rm data/model_matrix.csv
 	rm data/train_data.csv
-	rm data/canvass_records.csv
+	rm data/complaint_records.csv.gz
+	rm data/canvass_records.csv.gz
