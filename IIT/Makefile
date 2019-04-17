@@ -1,5 +1,8 @@
 all: model_train_test_split inspections_train_test_split data_portal_inspections
 
+data/historical_weather.csv:
+	python3 06_get_weather.py "data/historical_weather.csv"
+
 data_portal_inspections: data/canvass_records.csv.gz data/complaint_records.csv.gz
 
 data/complaint_records.csv.gz:
