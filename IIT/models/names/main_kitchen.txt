@@ -1,0 +1,7 @@
+main_kitchen
+main_kitchen__great
+main_kitchenroom_service
+main_kitchenfood_courtwarehousecafe_a1_a2
+main_kitchenstarbucks_eta_empl_cafe
+main_kitchen_employees_cafeteria
+main_kitchen_and_warehousesouth
